@@ -88,7 +88,7 @@ $(window).load(function(){
 });
 
 	// Somth page scroll
-    $('#navigation a, .smooth, a[href^="#theCouple"]').on( "click", function() {
+    $('#navigation a, .smooth, a[href^="#about2"], a[href^="#theCouple"]').on( "click", function() {
     if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
       var target = $(this.hash);
       target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
