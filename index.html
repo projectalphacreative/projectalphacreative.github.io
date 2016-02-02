@@ -448,29 +448,30 @@
 <script type="text/javascript" src="js/jquery.contact.js"></script> 
 <script src="http://maps.google.com/maps?file=api&amp;v=2.x&amp;key=ABQIAAAAjU0EJWnWPMv7oQ-jjS7dYxSPW5CJgpdgO_s4yyMovOaVh_KvvhSfpvagV18eOyDWu7VytS6Bi1CWxw" type="text/javascript"></script> 
 <script type="text/javascript">
-    var map;
+    
 
 
     function load() {
       if (GBrowserIsCompatible()) {
-          
-          
-        map = new GMap2(document.getElementById("map"));
+       /* map = new GMap2(document.getElementById("map"));*/
+        var map = new google.maps.Map(document.getElementById("map"));
         
         map.setCenter(new GLatLng(51.0486, -114.0708), 13);
         document.getElementById("map").checked = true;
         
         toggleZoom(false);
+          
+        function toggleZoom(isChecked) {
+          if (isChecked) {
+            map.enableScrollWheelZoom();
+          } else {
+            map.disableScrollWheelZoom();
+          }
+        }
       }
     }
 
-    function toggleZoom(isChecked) {
-      if (isChecked) {
-        map.enableScrollWheelZoom();
-      } else {
-        map.disableScrollWheelZoom();
-      }
-    }
+    
 </script> 
 
 <!--about jquery--> 
