@@ -1,3 +1,19 @@
+.logo {
+    float: left;
+    width: 103px !important;
+    height: 58px !important;
+    padding: 0 15px;
+    border: 0 solid #fff !important;
+    margin-top: 10px !important;
+    background-image: url('../images/PAC_Badge_white.png');
+}
+
+.isStuck .logo {
+    margin-top: 10px !important;
+    margin-left: 0;
+    border-color: #000 !important;
+    background-image: url('../images/PAC_Badge_black.png');
+}
 
 ul.footerLinks li span a {
     color: #ED1944;
